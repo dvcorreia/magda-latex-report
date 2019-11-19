@@ -1,0 +1,89 @@
+\section{How to write well}
+In this template we created some commands that provide to a non \LaTeX~ user an easy write without any knowledge about \TeX~or~\LaTeX technologies.
+
+\subsection{Authors}
+
+Fill the authors information. You can delete any of the authors or complementary information on them.
+
+\subsection{Equations}
+
+To use equations you can make them inline like this $x = y + z$ or you can do them like this:
+
+\begin{equation}\label{eq:timehtol}
+    \int_{0}^{tp_{HL}}dt = tp_{HL} = -C_L \int_{V_{dd}}^{V_{dd}/2}\frac{1}{I_{DSN}} dV_O
+\end{equation}
+
+And you can reference the equation like this \mintinline{Latex}{\ref{eq:timehtol}}, \textbf{e.g} \mintinline{Latex}{equation \ref{eq:timehtol}}, appearing like in the bold text \textbf{equation~\ref{eq:timehtol}}. It will automatically change if you other equations are inserted before, so this way you don't need to worry about equation numbering.
+
+\subsection{Lists}
+
+Making lists is very simple. Check the code bellow that makes the list showed in this section. Understand the code and change to your needs.
+
+\begin{codebox}{Code to make lists}
+    \begin{minted}{Latex}
+        \begin{itemize}
+            \item item 1
+            \item group 1
+            \begin{itemize}
+                \item item 2
+                \item item 3
+            \end{itemize}
+            \item item 4
+        \end{itemize}
+    \end{minted}
+\end{codebox}
+
+\begin{itemize}
+    \item item 1
+    \item group 1
+    \begin{itemize}
+        \item item 2
+        \item item 3
+    \end{itemize}
+    \item item 4
+\end{itemize}
+
+
+\subsection{Images}
+
+Images are placed like the example bellow. You can tune the width to make it fit your needs, it can take any units (cm, in, em ...). To reference an image you can follow the same approach as in equations: \mintinline{Latex}{\ref{img:engeniuslogo}}, image~\ref{img:engeniuslogo}.
+To change the image just replace the \textbf{url} in \textit{includegraphics}. Don't forget that you can change the label! Is this label that you need to reference when you want to do so.
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=\textwidth/3]{assets/engeniusLogo.png}
+        \caption{Engenius Image Example}
+        \label{img:engeniuslogo}
+    \end{center}
+\end{figure}
+
+\subsection{Code}
+
+Raw code can be inserted inline like this \mintinline{python}{print("Hello world!")}, or in a box like the one bellow. Check our code to see how to do it.
+
+\begin{codebox}{Example Code}
+    \begin{minted}{C}
+        #include <stdio.h>
+        int main()
+        {
+           // printf() displays the string inside quotation
+           printf("Hello, World!");
+           return 0;
+        }
+    \end{minted}
+\end{codebox}
+
+\subsection{References}
+
+References must be used when you use information from external fonts. There is no shame in referencing everything, it gives you credibility. Your bibliography must be in the file \mintinline{text}{./biblio.bib} structured like the examples already there. To cite something just use \mintinline{Latex}{\cite{name}}, that will show like this \cite{einstein}. The reference will then appear in the references section.
+
+\section{Questions, Bugs and Suggestions}
+
+This template was created by Diogo Correia and João Santos for the Engenius team. This is a port of the template with a few commands to ease the modification of the original template.
+Repository \textcolor{blue}{\href{https://https://github.com/dvcorreia/magda-latex-report}{here}}.
+
+If you find any bugs please make us know so we can fix then.
+If you have any suggestion or request feel free to request.
+If you have any question or you need help just contact us.
+
+All of that can be done in github's issues section at the following link:  \textcolor{blue}{\href{https://github.com/dvcorreia/magda-latex-report/issues/new}{here}}.

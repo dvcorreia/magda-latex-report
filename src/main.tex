@@ -1,0 +1,47 @@
+% Magda Latex Document Class
+% (c) 2019, Diogo Correia and João Santos, MIT Licensed
+% Repository: https://github.com/dvcorreia/magda-latex-report
+
+\documentclass[]{magda}
+
+% Fill the document parameters
+
+% Fill the logo file name (logos must be inside assets folder)
+% Is possible to remove the one of the logos
+\logoone{uaLogo.png}
+\logotwo{engeniusLogo.png}
+
+% Chose the top bar color (RGB)
+\barcolor{51}{51}{255}
+
+% Change the top right header information
+\upperrighttag{Department of Electronics at UA}
+
+% Remove \titletwo if you need only one title
+\title{Engenius Latex Template}
+\titletwo{How to use it!}
+
+% Remove command if you don't want date to show
+\showdate{}
+
+% You can remove authors by deleting their correspondent info in \author
+\author{Author 1 \\ \email{emailauthor1@ua.pt}
+	\and Author 2 \\ \email{emailauthor2@ua.pt} \\ Electronics Department
+    \and Author 3 \\ \email{emailauthor3@ua.pt} \\ DEM
+} 
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+The \textbf{abstract} is supposed to be a brief resume of your report. This report example shows good practices when writing with this template.
+
+\end{abstract}
+
+\input{src/howtowritewell.tex}
+
+\bibliography{biblio}
+
+\end{document}
